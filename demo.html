@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Demo</title>
+	<style type="text/css">
+	a.test {
+    	font-weight: bold;
+	}
+	</style>
+</head>
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+	$( document ).ready(function() {
+		$( "a" ).click(function( event ) {
+    		event.preventDefault();
+    		$( this ).hide( "slow" );
+		});
+	});
+    </script>
+</body>
+</html>

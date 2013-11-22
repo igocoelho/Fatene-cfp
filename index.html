@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CFP</title>
+	<link rel="stylesheet" type="text/css" href="theme/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="theme/icon.css">
+	<link rel="stylesheet" type="text/css" href="theme/app.css">
+</head>
+<body class="easyui-layout">
+	<!-- Layout App -->
+	<div region="north" id="north" border="false">
+		<h3>Controle Financeiro Pessoal</h3>
+	</div>
+
+	<div region="west" split="true" id="west" title="Categorias">
+		<div id="tbCategorias">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" title="Nova Categoria" id="novaCategoria"></a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" title="Editar Categoria" id="editarCategoria"></a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" title="Remover Categoria" id="removerCategoria"></a>
+		</div>
+		<table id="dgCategorias" toolbar="tbCategorias"></table>
+	</div>
+
+	<div region="center" title="Movimentações">
+		<div id="tbMovimentacoes">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" title="Nova Movimentação" id="novaMovimentacao"></a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" title="Editar Movimentação" id="editarMovimentacao"></a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" title="Remover Movimentação" id="removerMovimentacao"></a>
+			<div class="navPeriodo">
+				<a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" title="Mês anterior" id="decremetarData"></a>
+				<span id="mesAnoAtual"></span>
+				<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true" title="Próximo mês" id="incremetarData"></a>
+			</div>
+		</div>
+		<table id="dgMovimentacoes"></table>
+	</div>
+
+	<div region="south" border="false" id="south">
+		&copy; 2013 FATENE - Todos os direitos reservados.
+	</div>
+	<!-- /Layout App -->
+
+
+	<!-- Form Categoria -->
+	<div id="dlgCategoria" class="easyui-dialog" closed="true" buttons="#btnsFrmCategoria">
+		<form id="frmCategoria" method="post">
+			<input type="hidden" name="id" id="categoriaId" />
+			<div class="fitem">
+				<label>Nome:</label><br/>
+				<input type="text" name="nome" id="categoriaNome" class="easyui-validatebox" required="true" maxlength="60">
+			</div>
+		</form>
+		<div id="btnsFrmCategoria">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-ok" id="salvarCategoria">Salvar</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlgCategoria').dialog('close')">Cancelar</a>
+		</div>
+	</div>
+	<!-- /Form Categoria -->
+
+
+	<!-- Form Movimentação -->
+	<div id="dlgMovimentacao" class="easyui-dialog" closed="true" buttons="#btnsFrmMovimentacao">
+		<form id="frmMovimentacao" method="post">
+			<input type="hidden" name="id" id="movimentacaoId" />
+			<div class="fitem">
+				<label>Tipo:</label><br/>
+				<select name="tipo" id="movimentacaoTipo" class="easyui-combobox" style="width:235px;">
+					<option value="D">Despesa</option>
+					<option value="R">Receita</option>
+				</select>
+			</div>
+			<div class="fitem">
+				<label>Descrição:</label><br/>
+				<input type="text" name="nome" id="movimentacaoDescricao" class="easyui-validatebox" maxlength="60">
+			</div>
+			<div class="fitem">
+				<label>Data:</label><br/>
+				<input type="text" name="nome" id="movimentacaoData" class="easyui-datebox">
+			</div>
+			<div class="fitem">
+				<label>Valor:</label><br/>
+				<input type="text" name="nome" id="movimentacaoValor" class="easyui-numberbox" data-options="min:0,precision:2">
+			</div>
+			<div class="fitem">
+				<label>Conta:</label><br/>
+				<input id="movimentacaoConta" name="conta_id" style="width:235px;">
+			</div>
+			<div class="fitem">
+				<label>Categoria:</label><br/>
+				<input id="movimentacaoCategoria" name="categoria_id" style="width:235px;">
+			</div>
+		</form>
+		<div id="btnsFrmMovimentacao">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-ok" id="salvarMovimentacao">Salvar</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlgMovimentacao').dialog('close')">Cancelar</a>
+		</div>
+	</div>
+	<!-- /Form Movimentação -->
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/application.js"></script>
+	<script type="text/javascript" src="js/commons.js"></script>
+	<script type="text/javascript" src="js/categoria.js"></script>
+	<script type="text/javascript" src="js/movimentacao.js"></script>
+</body>

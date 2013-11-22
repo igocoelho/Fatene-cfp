@@ -1,0 +1,33 @@
+body {
+	font-family: verdana, arial, serif;
+}
+
+form {
+	padding: 10px 20px;
+}
+
+input[type=text] {
+	width: 230px;
+}
+
+#north {
+	padding: 2px; 
+	height: 45px; 
+	background: #D2E0F2;
+}
+
+#west {
+	width: 250px;
+}
+
+#south {
+	padding: 4px; 
+	height: 25px; 
+	background: #D2E0F2;
+}
+
+div.navPeriodo {
+	position: absolute; 
+	right: 5px; 
+	top: 28px
+}
