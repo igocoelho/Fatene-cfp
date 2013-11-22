@@ -3,13 +3,13 @@ Slides, links e código fonte da oficina ministrada no Universo FATENE em Novemb
 Slides
 ------
 
-Single Page Application 
+Single Page Application<br />
 http://prezi.com/w1nmmvoqvyio/single-page-applications/
 
-JQuery
+JQuery<br />
 http://prezi.com/0w-vj8ppzc2e/jquery/
 
-REST
+REST<br />
 http://prezi.com/7qmjcheqajkp/rest/
 
 
@@ -17,13 +17,13 @@ http://prezi.com/7qmjcheqajkp/rest/
 Links
 -----
 
-JavaScript
+JavaScript<br />
 http://learn.jquery.com/javascript-101/
 
-How jQuery Works
+How jQuery Works<br />
 http://learn.jquery.com/about-jquery/how-jquery-works/
 
-JQuery EasyUI
+JQuery EasyUI<br />
 http://www.jeasyui.com/
 
 
@@ -31,10 +31,10 @@ http://www.jeasyui.com/
 Grupos
 ------
 
-Ceará JS
-http://www.cejs.com.br
+Ceará JS<br />
+http://www.cejs.com.br<br />
 https://groups.google.com/forum/#!forum/cearajs
 
-JavaCE
-http://www.javace.org
+JavaCE<br />
+http://www.javace.org<br />
 https://groups.google.com/forum/#!forum/javace	
